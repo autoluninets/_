@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>АвтоЭлектро — Компьютерная диагностика и ремонт электрики в Беларуси</title>
+  <meta name="description" content="Компьютерная диагностика, ремонт электрики и электромонтаж в автомобилях. Быстро. Надёжно. Гарантия. Работаем по всей Беларуси." />
+  <style>
+    :root{--accent:#0b7cff;--dark:#111;--muted:#666;--bg:#f7f9fc}
+    *{box-sizing:border-box}
+    html{scroll-behavior: smooth;}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--dark); background:var(--bg); -webkit-font-smoothing:antialiased}
+    header{background:white;box-shadow:0 4px 20px rgba(12,20,40,0.06);position:sticky;top:0;z-index:40}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:12px;align-items:center;font-weight:700;font-size:18px}
+    .logo svg{width:40px;height:40px}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .nav a:hover{transition:  background-color 0.5s ease, color 0.4s ease;color:var(--accent);background-color:rgba(11,124,255,0.08)}
+    .hero{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  padding: 56px 0;
+  align-items: center;
+
+  background-image: url('images/diagnostic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white; /* светлый текст на тёмном фоне */
+  min-height: 600px; /* высота блока — настрой по вкусу */
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* сверху, справа, снизу, слева = 0 */
+  background: rgba(0, 0, 0, 0.5); /* чёрный с прозрачностью 50% */
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.hero > * {
+  position: relative; /* чтобы текст был выше слоя затемнения */
+  z-index: 1;
+  padding: 20px;
+}
+.hero aside.card {
+  background: rgba(255 255 255 / 0.9);
+  color: var(--dark);
+  border-radius: 12px;
+  margin: 20px;
+}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:12px 16px;border-radius:10px;text-decoration:none;display:inline-block}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,124,255,0.12)}
+    .btn.ghost:hover{transition: background-color 0.5s ease, color 0.5s ease;background:var(--accent); color:white}
+
+    .card{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.06)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0}
+    .service h3{margin:8px 0 6px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    .how{margin:32px 0}
+    .steps{display:flex;gap:12px}
+    .step{flex:1;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(11,124,255,0.04),transparent)}
+
+    .pricing{display:flex;gap:12px;margin:32px 0}
+    .price{flex:1;padding:16px;border-radius:12px;background:white}
+
+    form input, form textarea, form button{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;margin-top:8px}
+    form label{font-size:13px;color:var(--muted)}
+
+    footer{padding:24px 0;color:var(--muted);font-size:14px}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;padding:28px 0}
+      .services{grid-template-columns:1fr}
+      .pricing{flex-direction:column}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="var(--accent)"/><path d="M14 30c6-8 12-6 20-10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>АвтоЭлектро</span>
+      </div>
+      <nav>
+        <a href="#services">Услуги</a>
+        <a href="#how">Как работаем</a>
+        <a href="#prices">Цены</a>
+        <a href="#contact" class="btn">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Компьютерная диагностика и ремонт электрики автомобилей</h1>
+        <p class="lead">Диагностика электронных систем, ремонт жгутов, замена блоков, программирование электронных модулей. Быстро — от 1 часа!</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Заказать диагностику</a>
+          <a class="btn ghost" href="tel:+375291321052">Позвонить: +375 (29) 132-10-52</a>
+        </div>
+        <div style="margin-top:18px;font-size:14px">Работаем: Лунинец и район. Выезд/сервис. Оплата наличными, картой, перевод.</div>
+      </div>
+      <aside class="card">
+        <strong>Быстрая запись</strong>
+        <p style="color:var(--muted);margin:6px 0 12px">Оставьте контакты — мы перезвоним в течение рабочего дня.</p>
+        <form action="https://formspree.io/f/meozvbve"
+              method="POST" id="quickForm">
+          <label>Имя<input id="qname" type="text" name="name" placeholder="Ваше имя" required></label>
+          <label>Телефон<input id="qphone" type="tel" name="tel" placeholder="+375291234567" required></label>
+          <label>Комментарий<textarea id="qmsg" rows="3" name="comment" placeholder="Коротко о проблеме"></textarea></label>
+          <button class="btn" onclick="submitQuick()">Отправить</button>
+          <div id="qok" style="display:none;margin-top:10px;color:green;font-weight:600">Спасибо! Мы свяжемся в ближайшее время.</div>
+        </form>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h2>Наши услуги</h2>
+      <div class="services">
+        <div class="card service">
+          <h3>Компьютерная диагностика</h3>
+          <p class="muted">Считывание ошибок, анализ параметров, тест датчиков и исполнительных механизмов.</p>
+        </div>
+        <div class="card service">
+          <h3>Ремонт электрики</h3>
+          <p class="muted">Диагностика и восстановление электронных блоков, замена плат и компонентов, устранение сбоев в работе.</p>
+        </div>
+        <div class="card service">
+          <h3>Блоки управления и программирование</h3>
+          <p class="muted">Ремонт/ремап ECU, обновление ПО, адаптация модулей и ключей.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h2>Как мы работаем</h2>
+      <div class="grid-2">
+        <div class="card">
+          <ol style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Вы связываетесь — назначаем удобное время.</li>
+            <li>Делаем компьютерную диагностику (снятие ошибок, логирование).</li>
+            <li>Согласуем объём работ и стоимость.</li>
+            <li>Выполняем ремонт, проверяем систему.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Преимущества</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Опыт — более 10 лет в автоэлектрике</li>
+            <li>Современное оборудование для диагностики</li>
+            <li>Отчет по проделанным работам</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices">
+      <h2>Примеры цен</h2>
+      <div class="pricing">
+        <div class="price card">
+          <h4>Компьютерная диагностика</h4>
+          <p style="margin:6px 0 12px;color:var(--muted)">от 30 BYN</p>
+        </div>
+        <div class="price card">
+          <h4>Ремонт электрики</h4>
+          <p style="margin:6px 0 12px;color:var(--muted)">оговаривается (зависит от сложности)</p>
+        </div>
+        <div class="price card">
+          <h4>Работа с блоком управления</h4>
+          <p style="margin:6px 0 12px;color:var(--muted)">от 80 BYN (зависит от сложности)</p>
+        </div>
+      </div>
+      <div style="color:var(--muted);font-size:13px">Точные цены зависят от модели автомобиля и сложности работ — окончательная стоимость после диагностики.</div>
+    </section>
+
+    <section id="contact" style="margin:32px 0">
+      <h2>Контакты</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p><strong>АвтоЭлектро</strong></p>
+          <p>Телефон: <a href="tel:+375291234567">+375 (29) 132-10-52</a></p>
+          <p>WhatsApp: <a href="https://wa.me/375291321052" target="_blank">Написать в WhatsApp</a></p>
+          <p>Адрес: г. Лунинец, ул. Садовая, 6 — выезд по договорённости</p>
+          <p>Время работы: Пн–Пт 9:00–18:00, Сб 9:00–14:00</p>
+        </div>
+        <div class="card">
+          <form action="https://formspree.io/f/meozvbve"
+                method="POST" id="contactForm">
+            <label>Имя<input id="name" type="text" name="name" placeholder="Ваше имя" required></label>
+            <label>Телефон<input id="phone" type="tel" name="tel" placeholder="+375291234567" required></label>
+            <label>Марка, модель и год<input id="car" name="mark_model_year" type="text" placeholder="Toyota Corolla 2011, VW Golf 2015..." ></label>
+            <label>Описание проблемы<textarea id="message" rows="4" name="description" placeholder="Коротко опишите проблему"></textarea></label>
+            <button class="btn" onclick="submitContact()">Отправить заявку</button>
+            <div id="ok" style="display:none;margin-top:10px;color:green;font-weight:600">Ваша заявка принята. Мы свяжемся с вами.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>© АвтоЭлектро — Все права защищены. Реквизиты доступны по запросу.</div>
+        <div style="color:var(--muted);font-size:13px">Политика конфиденциальности</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitQuick(){
+      const name=document.getElementById('qname').value.trim();
+      const phone=document.getElementById('qphone').value.trim();
+      if(!name||!phone){alert('Пожалуйста, укажите имя и телефон');return}
+      // Здесь можно отправить данные на почту/сервер. Пока — имитация.
+      document.getElementById('qok').style.display='block';
+      form.reset();
+      setTimeout(()=>{document.getElementById('qok').style.display='none';document.getElementById('quickForm').reset()},2000)
+    }
+    function submitContact(){
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      if(!name||!phone){alert('Пожалуйста, укажите имя и телефон');return}
+      document.getElementById('ok').style.display='block';
+      form.reset();
+      setTimeout(()=>{document.getElementById('contactForm').reset();document.getElementById('ok').style.display='none'},2500)
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+     const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Отменяем стандартную отправку
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/yourFormID', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (response.ok) {
+        document.getElementById('ok').style.display = 'block';
+        form.reset();  // Очищаем форму
+        setTimeout(() => {
+          document.getElementById('ok').style.display = 'none';
+        }, 3000);
+      } else {
+        alert('Ошибка отправки, попробуйте позже');
+      }
+    } catch (error) {
+      alert('Ошибка сети, попробуйте позже');
+    }
+  });
+
+  </script>
+</body>
+</html>
